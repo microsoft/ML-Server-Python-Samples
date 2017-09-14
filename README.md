@@ -1,6 +1,6 @@
 # Microsoft Machine Learning Python Samples
 
-| Discover more examples at [Microsoft Machine Learning Server](https://github.com/Microsoft/ML-Server)
+> Discover more examples at [Microsoft Machine Learning Server](https://github.com/Microsoft/ML-Server)
 
 In these examples, we will demonstrate how to develop and deploy end-to-end advanced analytics Python solutions with ML Server.
 
