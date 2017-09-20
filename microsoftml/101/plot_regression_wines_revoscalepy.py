@@ -1,5 +1,5 @@
 """
-Use a regression to predict wine quality with microsoftml
+Use a regression to predict wine quality with revoscalepy
 =========================================================
 
 I will use `wine quality data set <https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv>`_
@@ -18,6 +18,8 @@ The experiment is shown below and can be found in the
 - `Predicting Wine
   Quality <https://github.com/shaheeng/ClassificationModelEvaluation/blob/master/PredictWineQuality_RevBlog3/Predicting%20Wine%20Quality%20-%20Shaheen.ipynb>`_
   (notebook)
+
+We use package :epkg:`revoscalepy`.
   
 *Contents:*
   
@@ -110,58 +112,53 @@ wines_train, wines_test = train_test_split(wines)
 # And we train. We drop the color which is a non numerical
 # features. We will add it later.
 
-from microsoftml import rx_fast_trees
+from revoscalepy import rx_dtree
 cols = wines.columns.drop(["quality", "color"])
-model = rx_fast_trees("quality ~" + "+".join(cols), data=wines_train, method="regression")
+model = rx_dtree("quality ~" + "+".join(cols), data=wines_train, method="anova")
 
 ######################
 # We predict.
 
-from microsoftml import rx_predict
-pred = rx_predict(model, wines_test, extra_vars_to_write=["quality"])
+from revoscalepy import rx_predict_rx_dtree
+pred = rx_predict_rx_dtree(model, wines_test, extra_vars_to_write=["quality"])
 print(pred.head())
 
 ###########################
-# The column 'Score' is the prediction.
+# The column 'quality_Pred' is the prediction.
 # We estimate its quality with the metric `R2 <http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html>`_
 # and we plot them.
 
 from sklearn.metrics import r2_score
-r2 = r2_score(pred.quality, pred.Score)
+r2 = r2_score(pred.quality, pred.quality_Pred)
 print("R2=", r2)
 
 fig, ax = plt.subplots(1, 1)
-ax.scatter(x=pred.quality, y=pred.Score)
+ax.scatter(x=pred.quality, y=pred.quality_Pred)
 ax.set_xlabel("quality")
 ax.set_ylabel("prediction")
 
 #########################
 # Still not easy to read.
 fig, ax = plt.subplots(1, 1)
-pred.plot.hexbin(x='quality', y='Score', ax=ax, gridsize=25)
+pred.plot.hexbin(x='quality', y='quality_Pred', ax=ax, gridsize=25)
 
 ################################
 # It seems to be doing a relatively good job to predict
 # marks 5, 6, 7. As we saw with the distribution, 
 # the dataset contain many examples for these marks
 # and not many for the others.
-#
 # .. index:: feature importance
 #
 # Feature Importance
 # ------------------
 # 
 # Let's see which variables contribute the most to the prediction.
-
-feature_importance = [(k, v) for k, v in model.summary_["keyValuePairs"].items()]
-
-import numpy
-fig, ax = plt.subplots(1, 1)
-ind = numpy.arange(len(feature_importance))
-ax.barh(ind, [f[1] for f in feature_importance], 0.35)
-ax.set_yticks(ind + 0.35 / 2)
-ax.set_yticklabels([f[0] for f in feature_importance])
-ax.set_title("Feature importances")
+# We train again but with parameter ``importance=True``.
+model = rx_dtree("quality ~" + "+".join(cols), data=wines_train, method="anova",
+                 importance=True)
+importance = model.importance
+importance.columns = ["feature importance"]
+importance.sort_values("feature importance").plot(kind="bar")
 
 #####################################
 # Alcohol is the dominant feature but the others still play
@@ -171,34 +168,28 @@ ax.set_title("Feature importances")
 # --------------------
 #
 # To answer that question, we need to add the wine color
-# as a new feature. Because it is a categorical feature, we 
-# need to convert it into a numerical one.
-# We use the transform :epkg:`microsoftml:categorical`
-# to convert column *color* into *color_num*.
+# as a new feature. We need to specify the column type as a category
+# to tell revoscalepy how to use it.
 
-from microsoftml import categorical
-cols = list(wines.columns.drop(["quality", "color"]))  # We still drop column color.
-cols.append("color_num")  # But we add the new one.
-model = rx_fast_trees("quality ~" + "+".join(cols), data=wines_train, method="regression",
-                      ml_transforms=[categorical(cols=dict(color_num="color"))])
-pred = rx_predict(model, wines_test, extra_vars_to_write=["quality"])
-r2_color = r2_score(pred.quality, pred.Score)
+wines_train["color"] = wines_train["color"].astype("category")
+model_color = rx_dtree("quality ~ color +" + "+".join(cols), data=wines_train, method="anova",
+                 importance=True)
+
+wines_test["color"] = wines_test["color"].astype("category")
+pred_color = rx_predict_rx_dtree(model_color, wines_test, extra_vars_to_write=["quality"])
+r2_color = r2_score(pred_color.quality, pred_color.quality_Pred)
 print("R2 with colors=", r2_color)
 
 #####################################
 # Performance is not better. Let's confirm that with 
 # the feature importances.
 
-feature_importance = [(k, v) for k, v in model.summary_["keyValuePairs"].items()]
-
-import numpy
-fig, ax = plt.subplots(1, 1)
-ind = numpy.arange(len(feature_importance))
-ax.barh(ind, [f[1] for f in feature_importance], 0.35)
-ax.set_yticks(ind + 0.35 / 2)
-ax.set_yticklabels([f[0] for f in feature_importance])
-ax.set_title("Feature importances with colors")
+importance_color = model_color.importance
+importance_color.columns = ["feature importance"]
+importance_color.sort_values("feature importance").plot(kind="bar")
 
 #########################
 # Color does not help or we can say that the prediction model
 # is color blind.
+
+# plt.show()
