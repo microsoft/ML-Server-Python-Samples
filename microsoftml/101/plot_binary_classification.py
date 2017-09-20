@@ -175,8 +175,8 @@ print(y_pred[:5])
 from sklearn.metrics import roc_curve
 prob_pred = [y_pred.loc[i, "Probability"] if y_pred.loc[i, "PredictedLabel"] \
              else (1 - y_pred.loc[i, "Probability"]) for i in range(0, y_pred.shape[0])]
-good = y_pred["PredictedLabel"] == (data_test["Label"] == 1)
-fpr, tpr, th = roc_curve((y_pred["PredictedLabel"] == data_test["Label"]).ravel(), prob_pred)
+good = y_pred["PredictedLabel"].as_matrix() == (data_test["Label"] == 1).as_matrix()
+fpr, tpr, th = roc_curve(good.ravel(), prob_pred)
 
 ################################
 # For index ``i``, ``th[i]`` is a threshold,
