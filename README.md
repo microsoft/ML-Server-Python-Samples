@@ -1,24 +1,26 @@
-# Microsoft Machine Learning Python Samples
+# Microsoft Machine Learning Python Samples with ML Server
 
 > Discover more examples at [Microsoft Machine Learning Server](https://github.com/Microsoft/ML-Server)
 
-In these examples, we will demonstrate how to develop and deploy end-to-end advanced analytics Python solutions with ML Server.
+In these examples, we will demonstrate how to develop and deploy end-to-end advanced analytics Python solutions with ]ML Server](https://docs.microsoft.com/en-us/machine-learning-server/what-is-machine-learning-server). **The samples provided here are created in Python.**
+Samples in R are available in [the ML Server R Templates repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 
-# Contributing
+Although these samples have not been written for SQL Server ML Services, they can be deployed in the same manner as the R Templates that are provided in the repository linked above.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+## Available Samples
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+|Category|Sample|Repository|Documentation|
+|-|-|-|-|
+|Operationalization|Deploy Python model as a web service|[Notebook](operationalize\Quickstart_Publish_Python_Web_Service.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)|
+|Operationalization|Integrate a real-time web service into an application|[Repository](operationalize\Publish_Realtime_Web_Service_in_Python.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-application-integration-with-swagger)|
+|Classification|Binary classification|[Notebook](microsoftml\quickstarts\binary-classification\Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
+|Operationalization|Consuming web services synchronously|[Notebook](operationalize\Explore_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services)|
+|Operationalization|Consuming web services asynchronously|[Notebook](operationalize\Explore_Batch_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services-async)|
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Contributing
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-# Legal Notices
+## Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
 in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
