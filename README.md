@@ -3,13 +3,13 @@
 > Discover more examples at [Microsoft Machine Learning Server](https://github.com/Microsoft/ML-Server)
 
 In these examples, we will demonstrate how to develop and deploy end-to-end advanced analytics Python solutions with ]ML Server](https://docs.microsoft.com/en-us/machine-learning-server/what-is-machine-learning-server). **The samples provided here are created in Python.**
-Samples in R are available in [the ML Server R Templates repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
+Samples in R are available in [the ML Server R Templates repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples).
 
 Although these samples have not been written for SQL Server ML Services, they can be deployed in the same manner as the R Templates that are provided in the repository linked above.
 
 ## Available Samples
 
-|Category|Sample|Repository|Documentation|
+|Category|Sample|Code|Documentation|
 |-|-|-|-|
 |Operationalization|Deploy Python model as a web service|[Notebook](operationalize/Quickstart_Publish_Python_Web_Service.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)|
 |Operationalization|Integrate a real-time web service into an application|[Notebook](operationalize/Publish_Realtime_Web_Service_in_Python.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-application-integration-with-swagger)|
