@@ -11,11 +11,11 @@ Although these samples have not been written for SQL Server ML Services, they ca
 
 |Category|Sample|Repository|Documentation|
 |-|-|-|-|
-|Operationalization|Deploy Python model as a web service|[Notebook](operationalize\Quickstart_Publish_Python_Web_Service.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)|
-|Operationalization|Integrate a real-time web service into an application|[Repository](operationalize\Publish_Realtime_Web_Service_in_Python.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-application-integration-with-swagger)|
-|Classification|Binary classification|[Notebook](microsoftml\quickstarts\binary-classification\Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
-|Operationalization|Consuming web services synchronously|[Notebook](operationalize\Explore_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services)|
-|Operationalization|Consuming web services asynchronously|[Notebook](operationalize\Explore_Batch_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services-async)|
+|Operationalization|Deploy Python model as a web service|[Notebook](operationalize/Quickstart_Publish_Python_Web_Service.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)|
+|Operationalization|Integrate a real-time web service into an application|[Notebook](operationalize/Publish_Realtime_Web_Service_in_Python.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-application-integration-with-swagger)|
+|Classification|Binary classification|[Notebook](microsoftml/quickstarts/binary-classification/Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
+|Operationalization|Consuming web services synchronously|[Notebook](operationalize/Explore_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services)|
+|Operationalization|Consuming web services asynchronously|[Notebook](operationalize/Explore_Batch_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services-async)|
 
 ## Contributing
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
