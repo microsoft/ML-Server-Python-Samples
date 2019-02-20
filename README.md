@@ -15,7 +15,7 @@ Although these samples have not been written for SQL Server ML Services, they ca
 |Basic|Use a **regression** to predict wine quality with *microsoftml*|[Code](plot_regression_wines.py)||
 |Basic|Doing **feature selection** using mutual information|[Code](plot_mutualinformation.py)||
 |Basic|Implementing **binary classification**|[Code](plot_binary_classification.py)||
-|Basic|Binary classification|[Notebook](microsoftml/quickstarts/binary-classification/Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
+|Basic|**Binary classification**|[Notebook](microsoftml/quickstarts/binary-classification/Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
 |Basic|Implementing **multi-class classification**|[Code](plot_iris.py)||
 |Basic|Working with **categorical features**|[Code](plot_categorical_features.py)||
 |Basic|Using formulas|[Code](plot_formula.py)||
