@@ -11,21 +11,21 @@ Although these samples have not been written for SQL Server ML Services, they ca
 
 |Category|Sample|Code|Documentation|
 |-|-|-|-|
-|Basic|Use a **regression** to predict wine quality with RevoscalePy|[Code](microsoftml/101/plot_regression_wines_revoscale.py)||
+|Basic|Use a **regression** to predict wine quality with RevoscalePy|[Code](microsoftml/101/plot_regression_wines_revoscalepy.py)||
 |Basic|Use a **regression** to predict wine quality with *microsoftml*|[Code](microsoftml/101/plot_regression_wines.py)||
 |Basic|Doing **feature selection** using mutual information|[Code](microsoftml/101/plot_mutualinformation.py)||
-|Basic|Implementing **binary classification**|[Code](plot_binary_classification.py)||
+|Basic|Implementing **binary classification**|[Code](microsoftml/101/plot_binary_classification.py)||
 |Basic|**Binary classification**|[Notebook](microsoftml/quickstarts/binary-classification/Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
-|Basic|Implementing **multi-class classification**|[Code](plot_iris.py)||
-|Basic|Working with **categorical features**|[Code](plot_categorical_features.py)||
-|Basic|Using formulas|[Code](plot_formula.py)||
-|Basic|Using a **loss function**|[Code](plot_loss_function.py)||
-|Basic|Working with input schemas|[Code](plot_mistakes.py)||
-|Basic|Classifying images using image featurization|[Code](plot_image_featurizer_classify.py)||
-|Basic|Finding similar images using image featurization|[Code](plot_image_featurizer_match.py)||
-|Advanced|Tuning model **hyperparameters** using a grid search|[Code](202/plot_grid_search.py)||
-|Advanced|Implementing **sentiment analysis**|[Code](202/plot_sentiment_analysis.py)||
-|Advanced|Implementing **text featurization**|[Code](202/plot_text_featurization.py)||
+|Basic|Implementing **multi-class classification**|[Code](microsoftml/101/plot_iris.py)||
+|Basic|Working with **categorical features**|[Code](microsoftml/101/plot_categorical_features.py)||
+|Basic|Using formulas|[Code](microsoftml/101/plot_formula.py)||
+|Basic|Using a **loss function**|[Code](microsoftml/101/plot_loss_function.py)||
+|Basic|Working with input schemas|[Code](microsoftml/101/plot_mistakes.py)||
+|Basic|Classifying images using image featurization|[Code](microsoftml/101/plot_image_featurizer_classify.py)||
+|Basic|Finding similar images using image featurization|[Code](microsoftml/101/plot_image_featurizer_match.py)||
+|Advanced|Tuning model **hyperparameters** using a grid search|[Code](microsoftml/202/plot_grid_search.py)||
+|Advanced|Implementing **sentiment analysis**|[Code](microsoftml/202/plot_sentiment_analysis.py)||
+|Advanced|Implementing **text featurization**|[Code](microsoftml/202/plot_text_featurization.py)||
 |Operationalization|Deploy Python model as a web service|[Notebook](operationalize/Quickstart_Publish_Python_Web_Service.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)|
 |Operationalization|Integrate a real-time web service into an application|[Notebook](operationalize/Publish_Realtime_Web_Service_in_Python.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/quickstart-application-integration-with-swagger)|
 |Operationalization|Consuming web services synchronously|[Notebook](operationalize/Explore_Consume_Python_Web_Services.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/operationalize/python/how-to-consume-web-services)|
