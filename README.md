@@ -11,9 +11,9 @@ Although these samples have not been written for SQL Server ML Services, they ca
 
 |Category|Sample|Code|Documentation|
 |-|-|-|-|
-|Basic|Use a **regression** to predict wine quality with RevoscalePy|[Code](plot_regression_wines_revoscale.py)||
-|Basic|Use a **regression** to predict wine quality with *microsoftml*|[Code](plot_regression_wines.py)||
-|Basic|Doing **feature selection** using mutual information|[Code](plot_mutualinformation.py)||
+|Basic|Use a **regression** to predict wine quality with RevoscalePy|[Code](microsoftml/101/plot_regression_wines_revoscale.py)||
+|Basic|Use a **regression** to predict wine quality with *microsoftml*|[Code](microsoftml/101/plot_regression_wines.py)||
+|Basic|Doing **feature selection** using mutual information|[Code](microsoftml/101/plot_mutualinformation.py)||
 |Basic|Implementing **binary classification**|[Code](plot_binary_classification.py)||
 |Basic|**Binary classification**|[Notebook](microsoftml/quickstarts/binary-classification/Binary+Classification+Quickstart.ipynb)|[Documentation](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)|
 |Basic|Implementing **multi-class classification**|[Code](plot_iris.py)||
